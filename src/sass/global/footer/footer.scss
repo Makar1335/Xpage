@@ -1,0 +1,54 @@
+.footer {
+    padding: 50px 0;
+
+    &__top {
+        padding-bottom: 52px;
+        border-bottom: 2px solid #373334;
+    }
+
+    &__social-media {
+        &__list {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        &__item {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+
+    }
+
+    &__bottom {
+        padding-top: 47px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__copyright-privacy-policy {
+        font-size: 14px;
+        color: #373334; 
+    }
+
+    &__copyright {
+        &__text {}
+    }
+
+    &__privacy-policy {
+        
+        &__text {
+            color: #373334;
+        }
+    }
+
+
+    &_xpage {
+        img {}
+    }
+}

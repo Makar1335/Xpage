@@ -1,0 +1,18 @@
+.banner{
+    margin-top: 85px;
+    max-height: 400px;
+    padding-bottom: 97px;
+    border-bottom: 4px solid #373334;
+    &-wide{
+        background: black;
+        max-width: 1503px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__img{
+    }
+    
+}

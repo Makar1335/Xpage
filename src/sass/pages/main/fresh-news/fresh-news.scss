@@ -1,0 +1,20 @@
+.fresh-news{
+    padding-top: 84px;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 54px;
+        h1{
+            font-size: 100px;
+            max-width: 617px;
+            color: #373334;
+        }
+    }
+}
+.fresh-news__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 48px;
+    justify-content: space-between;
+}
