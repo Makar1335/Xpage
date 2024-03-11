@@ -1,3 +1,5 @@
+@import '../../config.scss';
+
 .footer {
     padding: 50px 0;
 
@@ -18,8 +20,10 @@
             margin-right: 20px;
         }
 
-        &__title {
-            font-size: 24px;
+        &__title { 
+            line-height: $footer__sm__title-lheight;
+            font-size: $footer__sm__title-fsize;
+            font-weight: $footer__sm__title-fwidgth;
             margin-bottom: 16px;
         }
 
@@ -31,8 +35,11 @@
         display: flex;
         justify-content: space-between;
     }
+
     &__copyright-privacy-policy {
-        font-size: 14px;
+        line-height: $footer__cpp-lheight;
+        font-size: $footer__cpp-fsize;
+        font-weight: $footer__cpp-fwidgth;
         color: #373334; 
     }
 
@@ -41,7 +48,7 @@
     }
 
     &__privacy-policy {
-        
+
         &__text {
             color: #373334;
         }
@@ -50,5 +57,30 @@
 
     &_xpage {
         img {}
+    }
+}
+@media only screen and (max-width: 320px) {
+    .footer {
+    
+        &__top {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        &__social-media {
+            
+            &__title { 
+                line-height: $mobile-footer__sm__title-lheight;
+                font-size: $mobile-footer__sm__title-fsize;
+                font-weight: $mobile-footer__sm__title-fwidgth;
+            }
+        }
+    
+        &__bottom {
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 }

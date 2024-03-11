@@ -1,34 +1,80 @@
+@import '../../../config.scss';
+
 .vector {
     padding-top: 85px;
-    .wrapper{
+
+    .wrapper {
         padding-bottom: 85px;
     }
+
     &__top {
         padding-bottom: 64px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
         h1 {
-            font-size: 100px;
-            font-weight: bold;
+            font-size: $h1-fsize;
+            font-weight: $h1-fweight;
+            line-height: $h1-lheight;
             max-width: 700px;
-            line-height: 90%;
         }
-        &__buttons{
+
+        &__buttons {
             display: flex;
             justify-content: space-between;
             max-width: 140px;
-                
+
+            &__back,
+            &__forvard {
+                background: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:hover {
+                    background: rgba(155, 155, 155, 0.300);
+                }
+            }
+
+            &__forvard {
+                margin-left: 20px;
+            }
+
             &__img {
                 max-width: 60px;
                 max-height: 60px;
             }
+
         }
     }
 
     &__content {
         display: flex;
-        gap: 47px;
+        gap: 47px; 
         padding-bottom: 85px;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .vector {
+        padding-top: 0;
+    
+        &__top {
+    
+            h1 {
+                font-size: $mobile-h1-fsize;
+                font-weight: $mobile-h1-fweight;
+                line-height: $mobile-h1-lheight;
+            }
+    
+            &__buttons {
+                display: none;
+            }
+        }
+    
+        .content-button{
+            width: 100%;
+        }
     }
 }

@@ -1,13 +1,32 @@
+@import '../../config.scss';
+
 .tag {
-    font-size: 16px;
-    color: #9F0023;
+    color: $tag-color;
+    font-size: $tag-fsize;
+    line-height: $tag-lheight;
+    font-weight: $tag-fwidgth;
 }
 
 .card {
     max-width: 440px;
-    min-height: 466.62px;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: #373334;
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 28px;
+        background-image: url('img/pages/main/fresh-news/cards/link.svg');
+        background-size: cover;
+        margin-top: auto;
+    }
+
+    &:hover {
+        color: #9F0023;
+    }
 
     &__item {
         display: flex;
@@ -15,28 +34,30 @@
         align-items: flex-start;
 
         &-img {
-            max-height: 264px;
-            max-width: 440px;
+            height: 100%;
             margin-bottom: 20px;
         }
 
         &-top {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             gap: 39px;
             color: #959595;
             margin-bottom: 15px;
 
             &__date {
-                font-size: 12px;
-                color: #959595;
+                font-size: $date-fsize;
+                color: $date-color;
+                font-weight: $date-fwidgth;
+                line-height: $date-lheight;
             }
         }
 
         &-bottom {
             &__title {
-                font-size: 20px;
-                color: #373334;
+                font-size: $title-fsize;
+                font-weight: $title-fwidgth;
+                line-height: $title-lheight;
             }
 
             &__sub-title {
@@ -46,14 +67,6 @@
             }
         }
 
-        &-lick {
-            &__img {
-                cursor: pointer;
-                width: 21.06px;
-                height: 18px;
-                rotate: -135°;
-            }
-        }
     }
 
     &__content {
@@ -79,5 +92,44 @@
             padding-left: 50px;
         }
     }
+}
 
+@media only screen and (max-width: 320px) {
+    .tag {
+        font-size: $mobile-tag-lheight;
+    }
+
+    .card {
+        max-width: 272px;
+
+        &::after {
+            content: none;
+        }
+
+        &__item {
+
+            &-top {
+                &__date {
+                    line-height: $mobile-date-lheight;
+                }
+            }
+
+            &-bottom {
+                &__title {
+                    font-size: $mobile-title-fsize;
+                    line-height: $mobile-title-lheight;
+                }
+
+                // &__sub-title {
+                //     padding-top: 70px;
+                //     font-size: 16px;
+                //     color: #373334;
+                // }
+            }
+        }
+
+        &__content {
+            margin-bottom: 0px;
+        }
+    }
 }

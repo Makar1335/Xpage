@@ -1,20 +1,50 @@
 section.hot-news
-    div.wrapper 
-        div.hot-news__content
-            div.hot-news__left
-                img.hot-news__img(src="img/pages/main/hot-new.svg", alt="фотография статьи")
-            div.hot-news__right
-                div.tag.hot-news__tag
+    .wrapper 
+        .hot-news__content
+            .hot-news__left
+                img.hot-news__img(src="img/pages/main/hot-news/hot-new_img.svg" alt="фотография статьи")
+            .hot-news__right
+                .tag.hot-news__tag
                     p.tag__text Общество 
-                div.hot-news__title
-                    h3.hot-news__title__text_size_52 Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону
+                .hot-news__title
+                    h3.hot-news__title__text Гонка сильнейших. На стадионе имени Светланы Ишмуратовой стартовал Чемпионат по биатлону
                 button.content-button.hot-news__content-button_color_black Читать
-        
-        
-        //- div.slider.hot-news__slider
-        //-     img.slider__img(src="", alt="")
-        //-     div.tag.slider__tag 
-        //-         p.tag__text Нацпроект 
-        //-     div.slider__title 
-        //-         p.title__text Безопасные и качественные автомобильные дороги
 
+    .slider
+        .slider__slides
+            input(type="radio", name="r", id="r1", checked)
+            input(type="radio", name="r", id="r2")
+            input(type="radio", name="r", id="r3")
+            input(type="radio", name="r", id="r4")
+            input(type="radio", name="r", id="r5")
+            .slide.s1
+                img.slide__img(src="img/pages/main/hot-news/slider_img.svg", alt="Изображение")
+                .slide__content  
+                    .tag Нацпроект
+                    h.title Безопасные и качественные автомобильные дороги    
+            .slide
+                img.slide__img(src="img/pages/main/hot-news/slider_img.svg", alt="Изображение")
+                .slide__content  
+                    .tag Коммуналка
+                    h.title Безопасные и качественные автомобильные дороги    
+            .slide
+                img.slide__img(src="img/pages/main/hot-news/slider_img.svg", alt="Изображение")
+                .slide__content  
+                    .tag Медицина
+                    h.title Безопасные и качественные автомобильные дороги  
+            .slide
+                img.slide__img(src="img/pages/main/hot-news/slider_img.svg", alt="Изображение")
+                .slide__content  
+                    .tag Коммуналка
+                    h.title Безопасные и качественные автомобильные дороги  
+            .slide
+                img.slide__img(src="img/pages/main/hot-news/slider_img.svg", alt="Изображение")
+                .slide__content  
+                    .tag Нацпроект
+                    h.title Безопасные и качественные автомобильные дороги  
+        .slider__swithc 
+            label.slider__swithc__bar(for="r1")
+            label.slider__swithc__bar(for="r2")
+            label.slider__swithc__bar(for="r3")
+            label.slider__swithc__bar(for="r4")
+            label.slider__swithc__bar(for="r5") 

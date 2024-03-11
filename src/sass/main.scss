@@ -1,11 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: Frank;
+    font-family: Frank, sans-serif;
 }
-.wrapper{
-    width: 1504px;
-    margin-bottom: 50px;
-    margin: 0 auto;
-} 
-@import './***/**/*.scss';  
+body{
+    background-color: #F2F2F2;
+
+}
+.wrapper {
+    max-width: 1504px;
+    margin: 0 auto; 
+}
+@media only screen and (max-width: 320px) {
+    .wrapper{
+        padding: 0 20px
+    }
+}
+@import './***/**/*.scss';

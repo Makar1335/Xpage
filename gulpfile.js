@@ -23,9 +23,8 @@ function server() {
     });
     watch(path.watcher.sass , buildSass).on('change', browserSync.reload);
     watch(path.watcher.pug, buildPug).on('change', browserSync.reload);
+    watch(path.watcher.img, img).on('change', browserSync.reload);
 }
-
-exports.img = img
 
 // задачи
 exports.dev = series(

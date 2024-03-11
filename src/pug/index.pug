@@ -6,15 +6,36 @@ html(lang="ru")
         title Главная
         link(rel="stylesheet" href="main.css")
     body 
-        include ../components/header/header.pug
+        include ../components/header/header.pug     
         include ../components/main/hot-news/hot-news.pug
         include ../components/main/fresh-news/fresh-news.pug
         include ../components/main/banner/banner.pug
         include ../components/main/vector/vector.pug
         include ../components/main/premiere/premiere.pug
         include ../components/footer/footer.pug
-    
-    
+
+    script.
+        const slider = document.getElementById('vector__content');
+        let isDragging = false;
+        let startPos = 0;
+        let startLeft = 0;
+        slider.addEventListener('mousedown', e => {
+            isDragging = true;
+            startPos = e.clientX;
+            startLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            const distance = e.clientX - startPos;
+            slider.scrollLeft = startLeft - distance;
+        });
+        slider.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
 //- 16:29 пример с циклами 
 //- 36:00 
 

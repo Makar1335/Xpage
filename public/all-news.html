@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Все новости</title><link rel="stylesheet" href="main.css">
   </head>
@@ -9,45 +9,34 @@
     <header class="header">
       <div class="wrapper"> 
         <div class="header__content">
-          <button class="content-button header__content-button_color_red">Предложить новость</button>
-          <div class="logo header__logo"><img class="logo-img header__logo-img_size_pc" src="img/header/logo.svg" alt="Логотип сайта"></div>
+          <button class="content-button header__content-button_color_red">Предложить новость</button><a class="logo header__logo" href="#"><img class="logo-img header__logo-img" src="img/header/logo.svg" alt="Логотип сайта"></a>
           <div class="header__phone-search">
-            <div class="header__phone-search-phone">
-              <p class="header__phone-search-phone-number">8 (3513) 65-17-11</p>
-            </div>
-            <div class="header__phone-search-search"><img class="header__phone-search-search-image" src="img/header/search.svg" alt="Иконка поиска"></div>
+            <div class="header__phone-search-phone"><a class="header__phone-search-phone-number" href="tel:123123213">8 (3513) 65-17-11</a></div>
+            <button class="header__phone-search-search"><img class="header__phone-search-search-image" src="img/header/search.svg" alt="Иконка поиска"></button>
           </div>
         </div>
         <nav class="navigation">
-          <ul class="menu navigation__menu">
-            <li class="menu-item">
-              <p class="menu-item-text">Новости</p>
-            </li>
-            <li class="menu-item">
-              <p class="menu-item-text">Телепроекты </p>
-            </li>
-            <li class="menu-item">
-              <p class="menu-item-text">Реклама</p>
-            </li>
-            <li class="menu-item">
-              <p class="menu-item-text">Онлайн </p><img class="menu-item-img" src="img/header/nav/arrow_to_down.svg" alt="стрелка вниз">
-            </li>
-            <li class="menu-item">
-              <p class="menu-item-text">Программа передач</p>
-            </li>
-            <li class="menu-item">
-              <p class="menu-item-text">Ещё </p><img class="menu-item-img" src="img/header/nav/arrow_to_down.svg" alt="стрелка вниз">
-            </li>
-          </ul>
+          <div class="menu">
+            <input class="burger-checkbox" type="checkbox" id="burger-checkbox">
+            <label class="burger" for="burger-checkbox"></label>
+            <ul class="menu-list navigation__menu">
+              <li class="menu-item"><a class="menu-item-text" href="#">Новости</a></li>
+              <li class="menu-item"><a class="menu-item-text" href="#">Телепроекты  </a></li>
+              <li class="menu-item"><a class="menu-item-text" href="#">Реклама</a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Онлайн</a></li>
+              <li class="menu-item"><a class="menu-item-text" href="#">Программа передач</a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Ещё </a></li>
+            </ul>
+          </div>
           <ul class="social-media navigation__social-media">
             <li class="social-media-item">
               <p class="social-media-item-text">Подписывайтесь на нас:</p>
             </li>
-            <li class="social-media-item"><img class="social-media-img" src="img/social-media/youtube.svg"></li>
-            <li class="social-media-item"><img class="social-media-img" src="img/social-media/facebook.svg"></li>
-            <li class="social-media-item"><img class="social-media-img" src="img/social-media/vk.svg"></li>
-            <li class="social-media-item"><img class="social-media-img" src="img/social-media/ok.svg"></li>
-            <li class="social-media-item"><img class="social-media-img" src="img/social-media/instagram.svg"></li>
+            <li class="social-media-item"><a href="#"><img class="social-media-item__img" src="img/social-media/youtube.svg" alt="логотип Ютуба"></a></li>
+            <li class="social-media-item"><a href="#"><img class="social-media-item__img" src="img/social-media/facebook.svg" alt="логотип Фейсбук"></a></li>
+            <li class="social-media-item"><a href="#"><img class="social-media-item__img" src="img/social-media/vk.svg" alt="логотип ВКонтакте"></a></li>
+            <li class="social-media-item"><a href="#"><img class="social-media-item__img" src="img/social-media/ok.svg" alt="логотип Одноклассников"></a></li>
+            <li class="social-media-item"><a href="#"><img class="social-media-item__img" src="img/social-media/instagram.svg" alt="логотип Инстаграм"></a></li>
           </ul>
         </nav>
       </div>
@@ -151,18 +140,18 @@
             <div class="footer__social-media__title">Подписывайтесь на нас:</div>
           </div>
           <ul class="social-media__list footer__social-media__list">
-            <li class="social-media__item"><img class="social-media__item__img" src="img/social-media/youtube.svg"></li>
-            <li class="social-media__item"><img class="social-media__item__img" src="img/social-media/facebook.svg"></li>
-            <li class="social-media__item"><img class="social-media__item__img" src="img/social-media/vk.svg"></li>
-            <li class="social-media__item"><img class="social-media__item__img" src="img/social-media/ok.svg"></li>
-            <li class="social-media__item"><img class="social-media__item__img" src="img/social-media/instagram.svg"></li>
+            <li class="social-media__item"><a href="#"><img class="social-media__item__img" src="img/social-media/youtube.svg"></a></li>
+            <li class="social-media__item"><a href="#"><img class="social-media__item__img" src="img/social-media/facebook.svg"></a></li>
+            <li class="social-media__item"><a href="#"><img class="social-media__item__img" src="img/social-media/vk.svg"></a></li>
+            <li class="social-media__item"><a href="#"><img class="social-media__item__img" src="img/social-media/ok.svg"></a></li>
+            <li class="social-media__item"><a href="#"><img class="social-media__item__img" src="img/social-media/instagram.svg"></a></li>
           </ul>
         </div>
         <div class="footer__bottom">
           <div class="footer__copyright-privacy-policy">
             <p class="footer__copyright__text">© 2021 «Златоустовское телевидение»</p><a class="footer__privacy-policy__text" href="#">Политика конфиденциальности</a>
           </div>
-          <div class="footer_xpage"><img class="footer_xpage_img" src="img/xpage.svg" alt="xpage logo"></div>
+          <div class="footer_xpage"><a href="#"> <img class="footer_xpage_img" src="img/xpage.svg" alt="xpage logo"></a></div>
         </div>
       </div>
     </footer>

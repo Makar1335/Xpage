@@ -1,3 +1,5 @@
+@import '../../config.scss';
+
 .logo {
     cursor: pointer;
 
@@ -8,37 +10,50 @@
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 4px solid #373334;
-    gap: 59px;
     padding-top: 52px;
+
+    .wrapper {
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #373334;
+            margin-top: 5px;
+        }
+    }
 
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #fff;
-        color: #373334;
         height: 50px;
         padding-bottom: 60px;
+
         &-button {
 
             &_color_red {
                 color: #9F0023;
                 border: 2px solid #9F0023;
+
+                &:hover {
+                    background: #99002123;
+                }
             }
+
         }
     }
 
+    a {
+        text-decoration: none;
+        color: #373334;
+    }
 
     &__logo {
 
         &-img {
-            &_size_pc {
-                max-width: 213.68px;
-                height: 48px;
-            }
+            max-width: 213px;
+            height: 48px;
         }
     }
 
@@ -51,18 +66,57 @@
         &-phone {
 
             &-number {
-                font-size: 20px;
-                font-weight: bold;
                 cursor: pointer;
+                font-size: $h-text-fsize;
+                font-weight: $h-text-fweight;
+                line-height: $h-text-lheight;
             }
         }
 
+
         &-search {
             cursor: pointer;
+            background: none;
+            border: 0px;
 
             &__image {
                 width: 18px;
                 height: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header {
+        position: relative;
+        padding-top: 20px;
+        &__content-button_color_red,
+        &__phone-search {
+            visibility: hidden;
+            overflow: hidden;
+            padding: 0;
+            width: 0;
+        }
+
+        &__logo {
+
+            &-img {
+                width: 104px;
+                height: 24px;
+            }
+        }
+
+        &__content {
+            padding-bottom: 20px;
+            &::after {
+                position: absolute;
+                right: 20px;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: url('img/header/megaphone.svg');
             }
         }
     }

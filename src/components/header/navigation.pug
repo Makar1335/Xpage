@@ -1,29 +1,35 @@
 nav.navigation
-        ul.menu.navigation__menu
+    .menu
+        input.burger-checkbox(type='checkbox', id='burger-checkbox')
+        label.burger(for='burger-checkbox')
+        ul.menu-list.navigation__menu
             li.menu-item
-                p.menu-item-text Новости
+                a(href="#").menu-item-text Новости
             li.menu-item
-                p.menu-item-text Телепроекты 
+                a(href="#").menu-item-text Телепроекты  
             li.menu-item
-                p.menu-item-text Реклама
+                a(href="#").menu-item-text Реклама
+            li.menu-item.openable
+                a(href="#").menu-item-text Онлайн
             li.menu-item
-                p.menu-item-text Онлайн 
-                img.menu-item-img(src='img/header/nav/arrow_to_down.svg' alt='стрелка вниз')
-            li.menu-item
-                p.menu-item-text Программа передач
-            li.menu-item
-                p.menu-item-text Ещё 
-                img.menu-item-img(src='img/header/nav/arrow_to_down.svg' alt='стрелка вниз')    
-        ul.social-media.navigation__social-media
-            li.social-media-item
-                p.social-media-item-text Подписывайтесь на нас:
-            li.social-media-item
-                img.social-media-img(src='img/social-media/youtube.svg')
-            li.social-media-item
-                img.social-media-img(src='img/social-media/facebook.svg')
-            li.social-media-item
-                img.social-media-img(src='img/social-media/vk.svg')
-            li.social-media-item
-                img.social-media-img(src='img/social-media/ok.svg')
-            li.social-media-item
-                img.social-media-img(src='img/social-media/instagram.svg')
+                a(href="#").menu-item-text Программа передач
+            li.menu-item.openable
+                a(href="#").menu-item-text Ещё 
+    ul.social-media.navigation__social-media
+        li.social-media-item
+            p.social-media-item-text Подписывайтесь на нас:
+        li.social-media-item
+            a(href="#")
+                img.social-media-item__img(src='img/social-media/youtube.svg', alt="логотип Ютуба")
+        li.social-media-item
+            a(href="#")
+                img.social-media-item__img(src='img/social-media/facebook.svg', alt="логотип Фейсбук")
+        li.social-media-item
+            a(href="#")
+                img.social-media-item__img(src='img/social-media/vk.svg', alt="логотип ВКонтакте")
+        li.social-media-item
+            a(href="#")
+                img.social-media-item__img(src='img/social-media/ok.svg', alt="логотип Одноклассников")
+        li.social-media-item
+            a(href="#")
+                img.social-media-item__img(src='img/social-media/instagram.svg', alt="логотип Инстаграм")

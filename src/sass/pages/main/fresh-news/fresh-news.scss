@@ -1,3 +1,4 @@
+@import '../../../config.scss';
 .fresh-news{
     padding-top: 84px;
     &__top{
@@ -6,7 +7,9 @@
         align-items: flex-end;
         padding-bottom: 54px;
         h1{
-            font-size: 100px;
+            font-size: $h1-fsize;
+            font-weight: $h1-fweight;
+            line-height: $h1-lheight;
             max-width: 617px;
             color: #373334;
         }
@@ -17,4 +20,24 @@
     flex-wrap: wrap;
     gap: 80px 48px;
     justify-content: space-between;
+}
+@media only screen and (max-width: 320px) {
+    .fresh-news{
+        &__top{
+            flex-direction: column;
+            h1{
+                font-size: $mobile-h1-fsize;
+                font-weight: $mobile-h1-fweight;
+                line-height: $mobile-h1-lheight;
+                padding-bottom: 52px;
+            }
+            .content-button{
+                width: 100%;
+            }
+        }
+    }
+    .fresh-news__cards{
+        gap: 44px; 
+        justify-content: center;
+    }
 }
