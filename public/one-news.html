@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Одна новость</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&amp;display=swap">
   </head>
   <body> 
     <header class="header">
@@ -24,9 +27,19 @@
               <li class="menu-item"><a class="menu-item-text" href="#">Новости</a></li>
               <li class="menu-item"><a class="menu-item-text" href="#">Телепроекты  </a></li>
               <li class="menu-item"><a class="menu-item-text" href="#">Реклама</a></li>
-              <li class="menu-item openable"><a class="menu-item-text" href="#">Онлайн</a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Онлайн</a>
+                <ul class="menu-item__open"> 
+                  <li class="menu-item__open__li"> <a href="#">Онлайн</a></li>
+                  <li class="menu-item__open__li"> <a href="#"> Офлайн</a></li>
+                </ul>
+              </li>
               <li class="menu-item"><a class="menu-item-text" href="#">Программа передач</a></li>
-              <li class="menu-item openable"><a class="menu-item-text" href="#">Ещё </a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Ещё </a>
+                <ul class="menu-item__open"> 
+                  <li class="menu-item__open__li"> <a href="#"> Ещё</a></li>
+                  <li class="menu-item__open__li"> <a href="#"> Харош</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <ul class="social-media navigation__social-media">
@@ -53,7 +66,9 @@
           </div>
           <div class="news__content_main">
             <h4>Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят в профильный режим. Приказ Министерство здравоохранения Челябинской области выпустило 27 января.</h4>
-            <p>Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19. За это время лечение на госпитальной базе прошли свыше 1000 пациентов.</p><img src="" alt="видео с новостью"><b>Александр Дорофеев</b><span>главный врач родильного дома г. Златоуста:</span>
+            <p>Напомним, перепрофилировать родильный дом решили в связи с ежедневным большим приростом златоустовцев, заболевших ковид-19. За это время лечение на госпитальной базе прошли свыше 1000 пациентов.</p>
+            <p> <img src="img/pages/main/fresh-news/cards/img4.svg" alt="видео с новостью"></p>
+            <p> <b>Александр Дорофеев</b><br><span>главный врач родильного дома г. Златоуста:</span></p>
             <p>«На сегодняшний день в МПЦ находятся 46 больных. Большая часть из них будет переведена на базу квартала Медик и меньшая часть – на базу долечивания, в район метзавода. В воскресенье к нам приезжает дезостанция для обработки всех помещений. С 1 по 7 число проводится заключительная дезинфекция всего родильного дома. С 8 числа мы начинаем принимать беременных и рожениц нашего города и горнозаводской зоны».</p>
             <p>Подготовка к возвращению профильной деятельности больниц проводится тщательным образом. Это полная дезинфекция помещений, забор ряда лабораторных анализов. И только после разрешения всех инстанций медицинское учреждение поступает к работе. Златоуст — не единственный город, где в связи со стабилизацией обстановки с коронавирусной инфекцией медицинские объекты возвращаются к плановому приёму пациентов. Решение по сокращению коечных мест для больных ковидом принимается оперативным штабом по борьбе с коронавирусной инфекцией при Правительстве Челябинской области. Оставшиеся ковид-базы перейдут в прежний режим работы при условии улучшения ситуации.</p>
           </div>
@@ -74,6 +89,24 @@
               <div class="share__text">Поделиться</div>
               <div class="share__img-list"><img class="share__img-list__item" src="img/social-media/youtube.svg"><img class="share__img-list__item" src="img/social-media/facebook.svg"><img class="share__img-list__item" src="img/social-media/vk.svg"><img class="share__img-list__item" src="img/social-media/ok.svg"><img class="share__img-list__item" src="img/social-media/instagram.svg"></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="comments">
+      <div class="wrapper">
+        <h1 class="title">Оставьте свой комментарий </h1>
+        <div class="comments__form form">
+          <div class="form__inputs">
+            <input class="form__inputs__input" type="text" placeholder="Имя">
+            <input class="form__inputs__input" type="text" placeholder="E-mail">
+            <label class="custom-file-upload" for="file-upload"> <img src="../../img/clip.svg" alt="какое-то фото"><span>Прикрепить файл  </span>
+              <input id="file-upload" type="file">
+            </label>
+            <input class="form__inputs__input" type="text" placeholder="Комментарий">
+          </div>
+          <div class="form__submit">
+            <button class="content-button form__submit-button">Отправить</button>
           </div>
         </div>
       </div>

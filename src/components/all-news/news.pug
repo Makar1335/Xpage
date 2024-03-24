@@ -1,96 +1,137 @@
 section.all-news
-    div.wrapper
+
+    .wrapper 
         h2 Все новости
-        div.path 
+        .path 
             a(href="#").path__item Главная /
             a(href="#").path__item Новости
 
-        div.all-news__controls
-            input.all-news__controls-date(type="date" value="2021-02-02")
+        .all-news__controls
+            .date_containet#date_containet 
+                script(type='text/javascript' charset='utf-8').
+                    webix.i18n.setLocale("ru-RU");
+                    webix.Date.isHoliday = false;
+                    webix.Date.startOnMonday = true;
+                    webix.ui({
+                        view: "form",
+                        container: "date_containet",
+                        width: 470,
+                        height: 100,
+                        elements: [
+                            {
+                                view: "datepicker",
+                                width: 470,
+                                height: 60,
+                                value: new Date(),
+                                timepicker: false,
+                                icons: false,
+                                block: function (date) {
+                                    // Функция, определяющая даты, которые нужно заблокировать
+                                    var day = date.getDay();
+                                    return (day === 0 || day === 6); // Заблокировать воскресенье (0) и субботу (6)
+                                }
+                            }
+                        ]
+                    });
 
-            select.all-news__controls-rubric
-                option Выбрать субрику   
-                option Медицина   
-                option Общество   
-                option Коммуналка   
-                option Политика   
-                option Спорт   
-                option Вектор развития   
-                
-        div.all-news__cards
+
+            .select_container#select_container 
+                script(type='text/javascript', charset='utf-8').
+                    webix.i18n.setLocale("ru-RU");
+                    webix.ui({
+                        view: "form",
+                        container: "select_container",
+                        width: 468,
+                        height: 100,
+                        elements: [
+                            {
+                                view: "select",
+                                width: 468,
+                                height: 60,
+                                options: [
+                                    { id: 1, value: "Выбрать рубрику" },
+                                    { id: 2, value: "Медицина" },
+                                    { id: 3, value: "Общество" },
+                                    { id: 4, value: "Коммуналка" },
+                                    { id: 5, value: "Политика" },
+                                    { id: 6, value: "Спорт" },
+                                    { id: 7, value: "Вектор развития" }
+                                ],
+                                css: "custom-select",
+                                labelAlign: "right"
+                            }
+                        ]
+                    });
+
+
+        .all-news__cards
+
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img1.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img2.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img3.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img4.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img5.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
             a.card.all-news__card(href="#")  
                 img.card__item-img(src="img/pages/all-news/news/img6.svg" alt="фотография новости")
-                div.card__content
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
 
-            
-            a.card_size_big.all-news__card(href="#")   
+
+            a.card.card_size_big.all-news__card(href="#")   
                 img.card__item-img(src="img/pages/all-news/news/img2.svg" alt="фотография новости")
-                div.card__content_size_big
-                    div.card__item-top 
-                        div.tag.card__item-top__tag Медицина
-                        div.card__item-top__date  29/01/2021 
-                    div.card_item-bottom
-                        div.card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
-                        div.card__item-bottom__sub-title Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...
-                img.card__item-lick(src="img/pages/main/fresh-news/cards/link.svg" alt="фотография для переходана на новость")
+                .card__content_size_big
+                    .card__item-top 
+                        .tag.card__item-top__tag Медицина
+                        .card__item-top__date  29/01/2021 
+                    .card_item-bottom
+                        .card__item-bottom__title Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции. Роддом Златоуста вновь откроет свои двери 8 февраля
+                        .card__item-bottom__sub-title Ещё одна главная новость дня — с 8 февраля златоустовский роддом возвращается к привычному формату работы. Госпитальную базу для лечения больных коронавирусной инфекцией переводят...
 
-        div.pagination
+        .pagination
             img.pagination__prev(src="img/pages/all-news/pagination-img.svg" alt="стрелочка назад")
             ul.pagination__list 
                 li.pagination__list__item 1

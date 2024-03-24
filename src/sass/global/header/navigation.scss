@@ -1,4 +1,5 @@
 @import '../../config.scss';
+
 .menu {
     list-style: none;
     gap: 48px;
@@ -15,6 +16,35 @@
         }
 
         &-img {}
+
+        &:hover {
+            position: relative;
+            
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: -88px;
+                li {
+                    text-align: center;
+                    background: #F2F2F2;
+                    width: 150px;
+                    padding: 10px 0;
+                    font-size: $h-text-fsize;
+                    font-weight: $h-text-fweight;
+                    line-height: $h-text-lheight;
+                    a{
+                        text-decoration: none;
+                        color: #959595;
+                    }
+                }
+            }
+        }
+
+        &__open {
+            display: none;
+        }
     }
 }
 
@@ -59,6 +89,7 @@
     color: #373334;
     height: 27px;
     padding-bottom: 24px;
+
     &__menu {
         list-style: none;
         gap: 48px;
@@ -71,6 +102,7 @@
             &-text {
                 font-weight: bold;
             }
+
         }
     }
 
@@ -91,25 +123,29 @@
         }
     }
 }
+
 .burger-checkbox,
-.burger{
+.burger {
     visibility: hidden;
 }
 
 @media only screen and (max-width: 320px) {
-    .navigation{
+    .navigation {
         position: absolute;
         top: 28px;
         width: 20px;
     }
-    .social-media{
+
+    .social-media {
         visibility: hidden;
         overflow: hidden;
     }
+
     .burger-checkbox,
-    .burger{
+    .burger {
         visibility: visible;
     }
+
     .menu {
         position: relative;
     }
@@ -176,17 +212,17 @@
         gap: 12px;
         padding: 42px 0;
         margin: 0;
-        background: none;     
+        background: none;
         list-style-type: none;
-        transform: translateX(-100%);    
-        transition: .3s; 
+        transform: translateX(-100%);
+        transition: .3s;
         width: 200px;
         visibility: hidden;
     }
 
     .menu-item {
         visibility: hidden;
-        display: block; 
+        display: block;
         padding: 8px;
         color: white;
         font-size: 18px;

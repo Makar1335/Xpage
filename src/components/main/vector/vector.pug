@@ -1,5 +1,5 @@
 section.vector 
-    .wrapper 
+    .wrapper  
         .vector__top 
             h1 Вектор развития 
             .vector__top__buttons 
@@ -7,39 +7,43 @@ section.vector
                     img.vector__top__buttons__img(src="img/pages/main/vector/back.svg" alt="кнопка назад")
                 button.vector__top__buttons__forvard
                     img.vector__top__buttons__img(src="img/pages/main/vector/forward.svg" alt="кнопка вперёд")
-        .vector__content#vector__content 
+        .vector__content
+            .swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden
+                .swiper-wrapper(aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;")
+                    .swiper-slide.swiper-slide-active(role="group" aria-label="1 / 4" style="margin-right: 30px;") 
+                        a.card.all-news__card(href="#")  
+                            img.card__item-img(src="img/pages/main/vector/cards/img1.svg" alt="фотография новости")
+                            .card__content
+                                .card__item-top 
+                                    .tag.card__item-top__tag 19/01/2021
+                                .card_item-bottom
+                                    h.card__item-bottom__title Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным
 
-            a.card.all-news__card(href="#")  
-                img.card__item-img(src="img/pages/main/vector/cards/img1.svg" alt="фотография новости")
-                .card__content
-                    .card__item-top 
-                        .tag.card__item-top__tag 19/01/2021
-                    .card_item-bottom
-                        h.card__item-bottom__title Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным
+                    .swiper-slide.swiper-slide-next(role="group" aria-label="2 / 4" style="margin-right: 30px;")
+                        a.card.all-news__card(href="#")  
+                            img.card__item-img(src="img/pages/main/vector/cards/img2.svg" alt="фотография новости")
+                            .card__content
+                                .card__item-top 
+                                    .tag.card__item-top__tag 15/01/2021
+                                .card_item-bottom
+                                    h.card__item-bottom__title Условия для воспитания и образования в Златоусте – одно из приоритетных направлений
 
-            a.card.all-news__card(href="#")  
-                img.card__item-img(src="img/pages/main/vector/cards/img2.svg" alt="фотография новости")
-                .card__content
-                    .card__item-top 
-                        .tag.card__item-top__tag 15/01/2021
-                    .card_item-bottom
-                        h.card__item-bottom__title Условия для воспитания и образования в Златоусте – одно из приоритетных направлений
+                    .swiper-slide(role="group" aria-label="3 / 4" style="margin-right: 30px;") 
+                        a.card.all-news__card(href="#")  
+                            img.card__item-img(src="img/pages/main/vector/cards/img3.svg" alt="фотография новости")
+                            .card__content
+                                .card__item-top 
+                                    .tag.card__item-top__tag 24/12/2020
+                                .card_item-bottom
+                                    h.card__item-bottom__title Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус
 
-            a.card.all-news__card(href="#")  
-                img.card__item-img(src="img/pages/main/vector/cards/img3.svg" alt="фотография новости")
-                .card__content
-                    .card__item-top 
-                        .tag.card__item-top__tag 24/12/2020
-                    .card_item-bottom
-                        h.card__item-bottom__title Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус
-
-            a.card.all-news__card(href="#")  
-                img.card__item-img(src="img/pages/main/vector/cards/img1.svg" alt="фотография новости")
-                .card__content
-                    .card__item-top 
-                        .tag.card__item-top__tag 19/01/2021
-                    .card_item-bottom
-                        h.card__item-bottom__title Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным
-
+                    .swiper-slide(role="group" aria-label="4 / 4" style="margin-right: 30px;") 
+                        a.card.all-news__card(href="#")  
+                            img.card__item-img(src="img/pages/main/vector/cards/img1.svg" alt="фотография новости")
+                            .card__content
+                                .card__item-top 
+                                    .tag.card__item-top__tag 19/01/2021
+                                .card_item-bottom
+                                    h.card__item-bottom__title Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным
         .vector__content-button 
             button.content-button Больше новостей 

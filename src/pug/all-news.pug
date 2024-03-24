@@ -2,10 +2,17 @@ doctype html
 html(lang="ru")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Все новости
-        <link rel="stylesheet" href="main.css">
-    body 
-        include ../components/header/header.pug
-        include ../components/all-news/news.pug 
-        include ../components/footer/footer.pug
+        script(src='//cdn.webix.com/edge/webix.js' type='text/javascript')
+        link(rel="stylesheet" href="//cdn.webix.com/edge/webix.css" type="text/css")
+        link(rel="stylesheet" href="main.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com")
+        link(rel="stylesheet" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap")
+
+
+body 
+    include ../components/header/header.pug
+    include ../components/all-news/news.pug 
+    include ../components/footer/footer.pug

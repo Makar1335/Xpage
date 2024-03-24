@@ -9,6 +9,7 @@
 
 .card {
     max-width: 440px;
+    height: 100%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,6 @@
         align-items: flex-start;
 
         &-img {
-            height: 100%;
             margin-bottom: 20px;
         }
 
@@ -82,14 +82,21 @@
     &_size_big {
         max-width: 100%;
         display: flex;
-        align-items: flex-end;
         min-height: 0px;
         text-decoration: none;
+        flex-direction: row;
+        background: #fff;
+        padding: 30px; 
 
         &__content {
-            margin-bottom: 0px;
             height: 100%;
             padding-left: 50px;
+        }
+        .card__item-img {
+            margin-bottom: 0;  
+        }
+        &::after {
+            width: 35px;
         }
     }
 }
@@ -119,12 +126,6 @@
                     font-size: $mobile-title-fsize;
                     line-height: $mobile-title-lheight;
                 }
-
-                // &__sub-title {
-                //     padding-top: 70px;
-                //     font-size: 16px;
-                //     color: #373334;
-                // }
             }
         }
 

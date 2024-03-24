@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   </head>
   <body> 
     <header class="header">
@@ -24,9 +28,19 @@
               <li class="menu-item"><a class="menu-item-text" href="#">Новости</a></li>
               <li class="menu-item"><a class="menu-item-text" href="#">Телепроекты  </a></li>
               <li class="menu-item"><a class="menu-item-text" href="#">Реклама</a></li>
-              <li class="menu-item openable"><a class="menu-item-text" href="#">Онлайн</a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Онлайн</a>
+                <ul class="menu-item__open"> 
+                  <li class="menu-item__open__li"> <a href="#">Онлайн</a></li>
+                  <li class="menu-item__open__li"> <a href="#"> Офлайн</a></li>
+                </ul>
+              </li>
               <li class="menu-item"><a class="menu-item-text" href="#">Программа передач</a></li>
-              <li class="menu-item openable"><a class="menu-item-text" href="#">Ещё </a></li>
+              <li class="menu-item openable"><a class="menu-item-text" href="#">Ещё </a>
+                <ul class="menu-item__open"> 
+                  <li class="menu-item__open__li"> <a href="#"> Ещё</a></li>
+                  <li class="menu-item__open__li"> <a href="#"> Харош</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <ul class="social-media navigation__social-media">
@@ -181,39 +195,48 @@
             <button class="vector__top__buttons__forvard"><img class="vector__top__buttons__img" src="img/pages/main/vector/forward.svg" alt="кнопка вперёд"></button>
           </div>
         </div>
-        <div class="vector__content" id="vector__content"> <a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img1.svg" alt="фотография новости">
-            <div class="card__content">
-              <div class="card__item-top"> 
-                <div class="tag card__item-top__tag">19/01/2021</div>
-              </div>
-              <div class="card_item-bottom">
-                <h class="card__item-bottom__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</h>
-              </div>
-            </div></a><a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img2.svg" alt="фотография новости">
-            <div class="card__content">
-              <div class="card__item-top"> 
-                <div class="tag card__item-top__tag">15/01/2021</div>
-              </div>
-              <div class="card_item-bottom">
-                <h class="card__item-bottom__title">Условия для воспитания и образования в Златоусте – одно из приоритетных направлений</h>
-              </div>
-            </div></a><a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img3.svg" alt="фотография новости">
-            <div class="card__content">
-              <div class="card__item-top"> 
-                <div class="tag card__item-top__tag">24/12/2020</div>
-              </div>
-              <div class="card_item-bottom">
-                <h class="card__item-bottom__title">Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус</h>
-              </div>
-            </div></a><a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img1.svg" alt="фотография новости">
-            <div class="card__content">
-              <div class="card__item-top"> 
-                <div class="tag card__item-top__tag">19/01/2021</div>
-              </div>
-              <div class="card_item-bottom">
-                <h class="card__item-bottom__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</h>
-              </div>
-            </div></a></div>
+        <div class="vector__content">
+          <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <div class="swiper-wrapper" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;">
+              <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" style="margin-right: 30px;"> <a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img1.svg" alt="фотография новости">
+                  <div class="card__content">
+                    <div class="card__item-top"> 
+                      <div class="tag card__item-top__tag">19/01/2021</div>
+                    </div>
+                    <div class="card_item-bottom">
+                      <h class="card__item-bottom__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</h>
+                    </div>
+                  </div></a></div>
+              <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4" style="margin-right: 30px;"><a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img2.svg" alt="фотография новости">
+                  <div class="card__content">
+                    <div class="card__item-top"> 
+                      <div class="tag card__item-top__tag">15/01/2021</div>
+                    </div>
+                    <div class="card_item-bottom">
+                      <h class="card__item-bottom__title">Условия для воспитания и образования в Златоусте – одно из приоритетных направлений</h>
+                    </div>
+                  </div></a></div>
+              <div class="swiper-slide" role="group" aria-label="3 / 4" style="margin-right: 30px;"> <a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img3.svg" alt="фотография новости">
+                  <div class="card__content">
+                    <div class="card__item-top"> 
+                      <div class="tag card__item-top__tag">24/12/2020</div>
+                    </div>
+                    <div class="card_item-bottom">
+                      <h class="card__item-bottom__title">Реализовали давно задуманные планы. На златоустовском «Заводе «Стройтехника» открылся ещё один производственный корпус</h>
+                    </div>
+                  </div></a></div>
+              <div class="swiper-slide" role="group" aria-label="4 / 4" style="margin-right: 30px;"> <a class="card all-news__card" href="#"> <img class="card__item-img" src="img/pages/main/vector/cards/img1.svg" alt="фотография новости">
+                  <div class="card__content">
+                    <div class="card__item-top"> 
+                      <div class="tag card__item-top__tag">19/01/2021</div>
+                    </div>
+                    <div class="card_item-bottom">
+                      <h class="card__item-bottom__title">Спортивный центр, доступный для всех жителей города и района метзавода. Бассейн «Сталь» теперь стал муниципальным</h>
+                    </div>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
         <div class="vector__content-button"> 
           <button class="content-button">Больше новостей </button>
         </div>
@@ -257,27 +280,11 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const slider = document.getElementById('vector__content');
-    let isDragging = false;
-    let startPos = 0;
-    let startLeft = 0;
-    slider.addEventListener('mousedown', e => {
-        isDragging = true;
-        startPos = e.clientX;
-        startLeft = slider.scrollLeft;
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
     });
-    slider.addEventListener('mousemove', e => {
-        if (!isDragging) return;
-        const distance = e.clientX - startPos;
-        slider.scrollLeft = startLeft - distance;
-    });
-    slider.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-    slider.addEventListener('mouseleave', () => {
-        isDragging = false;
-    });
-    
   </script>
 </html>

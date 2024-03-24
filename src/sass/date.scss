@@ -1,0 +1,196 @@
+.webix_view .webix_window .webix_popup {
+    border: 2px solid #373334;
+    color: #373334;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.webix_view .webix_calendar {
+    color: #373334;
+    width: 468px;
+    height: 350px;
+}
+
+.webix_cal_day {
+    color: #373334;
+}
+
+.webix_cal_body .webix_cal_event {
+    color: #373334;
+    font-weight: 400;
+}
+
+.webix_cal_body .webix_cal_outside {
+    color: #94A1B3;
+    font-weight: normal;
+}
+
+.webix_cal_month_name {
+    font-family: Frank;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center
+}
+
+.webix_cal_month {
+    font-family: Frank;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center
+}
+
+.webix_cal_header {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-bottom: 2px solid #373334;
+}
+
+.webix_cal_prev_button:before,
+.webix_cal_next_button:before {
+    content: none;
+}
+
+.webix_cal_prev_button {
+    background-image: url("../img/prev.svg");
+}
+
+.webix_cal_next_button {
+    background-image: url("../img/next.svg");
+}
+
+.webix_cal_body .webix_cal_today .webix_cal_day_inner {
+    border: none;
+    box-shadow: inset 0 0 0 1px #9f002200;
+    color: #9F0023;
+}
+
+.webix_cal_body .webix_cal_select .webix_cal_day_inner,
+.webix_cal_body .webix_cal_today.webix_cal_select .webix_cal_day_inner {
+    color: #373334;
+    border: 1px solid #373334;
+
+}
+
+.webix_inp_static {
+    padding: 0 30px;
+}
+
+.webix_input_icon .wxi-calendar {
+    right: none;
+    left: 5px;
+}
+
+body.webix_full_screen {
+    margin: 10px;
+}
+
+.webix_view.webix_window {
+    width: 468px;
+    height: 350px;
+}
+
+.webix_view>.webix_cal_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.webix_cal_row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.webix_view.webix_form,
+.webix_view.webix_form {
+    background: none;
+    border: 0px;
+}
+
+.webix_cal_body .webix_cal_select .webix_cal_day_inner,
+.webix_cal_body .webix_cal_today.webix_cal_select .webix_cal_day_inner {
+    &:hover {
+        background: none;
+    }
+
+    background: none;
+}
+
+
+.webix_el_box {
+    .webix_inp_static {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 200px;
+        cursor: pointer;
+    }
+
+    .webix_inp_combo {
+        background: #fff;
+        color: #333;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        position: absolute;
+        z-index: 1000;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .webix_inp_options {
+        padding: 5px;
+    }
+
+    .webixlist_item {
+        padding: 8px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+}
+
+.webix_el_box {
+    padding: 0;
+    border: 2px solid #373334;
+}
+
+.webix_el_datepicker .webix_inp_static {
+    background: none;
+}
+.webix_control{
+    background: none;
+}
+select{
+    background: none;
+}
+.webix_el_combo .webix_el_box,
+.webix_el_richselect .webix_el_box,
+.webix_el_datepicker .webix_el_box,
+.webix_el_colorpicker .webix_el_box,
+.webix_el_search .webix_el_box,
+.webix_el_text .webix_el_box,
+.webix_el_texthighlight .webix_el_box {
+    padding: 0;
+    border: 2px solid #373334;
+}
+
+.webix_el_select select{
+    option{
+        font-size: 16px;
+        margin: 20px;
+    }
+}

@@ -5,6 +5,10 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Главная
         link(rel="stylesheet" href="main.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com")
+        link(rel="stylesheet", href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
     body 
         include ../components/header/header.pug     
         include ../components/main/hot-news/hot-news.pug
@@ -14,28 +18,10 @@ html(lang="ru")
         include ../components/main/premiere/premiere.pug
         include ../components/footer/footer.pug
 
-    script.
-        const slider = document.getElementById('vector__content');
-        let isDragging = false;
-        let startPos = 0;
-        let startLeft = 0;
-        slider.addEventListener('mousedown', e => {
-            isDragging = true;
-            startPos = e.clientX;
-            startLeft = slider.scrollLeft;
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+    
+    script. 
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
         });
-        slider.addEventListener('mousemove', e => {
-            if (!isDragging) return;
-            const distance = e.clientX - startPos;
-            slider.scrollLeft = startLeft - distance;
-        });
-        slider.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-        slider.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-//- 16:29 пример с циклами 
-//- 36:00 
-

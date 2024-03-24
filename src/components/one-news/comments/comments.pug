@@ -1,0 +1,14 @@
+section.comments
+    .wrapper
+        h1.title Оставьте свой комментарий 
+        .comments__form.form
+            .form__inputs
+                input.form__inputs__input(type="text" placeholder="Имя") 
+                input.form__inputs__input(type="text" placeholder="E-mail") 
+                label(for="file-upload" class="custom-file-upload") 
+                    img(src="../../img/clip.svg" alt="какое-то фото")  
+                    span Прикрепить файл  
+                    input#file-upload(type="file")
+                input.form__inputs__input(type="text" placeholder="Комментарий") 
+            .form__submit
+                button.content-button.form__submit-button Отправить
